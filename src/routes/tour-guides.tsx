@@ -4,11 +4,11 @@ import { CatalogPage } from "@/components/CatalogPage";
 export const Route = createFileRoute("/tour-guides")({
   head: () => ({
     meta: [
-      { title: "Tour Guides — NOVEL" },
+      { title: "Ethiopian Tour Guides — NOVEL" },
       {
         name: "description",
         content:
-          "Meet the storytellers, historians, and locals who lead NOVEL journeys.",
+          "Meet the historians, priests, and highland guides who lead NOVEL journeys across Ethiopia.",
       },
     ],
   }),
@@ -20,41 +20,49 @@ function GuidesPage() {
     <CatalogPage
       issue="Ledger 03"
       eyebrow="The Storytellers"
-      title="Guides who know the back doors."
-      intro="Historians, chefs, glaciologists, and locals — each vetted, each with a decade or more on the ground."
+      title="Guides who know Ethiopia by name."
+      intro="Historians, priests, trekkers, and anthropologists — each vetted, each with a decade or more on the ground."
       ctaLabel="Request a guide"
       items={[
         {
-          id: "haruki",
-          title: "Haruki O.",
-          meta: "Kyoto — Temples & tea ceremony",
+          id: "tewodros",
+          title: "Tewodros A.",
+          meta: "Lalibela — Sacred history",
           detail:
-            "Third-generation tea master. Reads Higashiyama like a book. Private access to two closed sub-temples.",
-          price: "$680 / day",
+            "Deacon of the Bete Giyorgis. Fluent in Ge'ez, reads the church walls like scripture, arranges dawn liturgy.",
+          price: "$260 / day",
         },
         {
-          id: "eleni",
-          title: "Eleni P.",
-          meta: "Cyclades — Marine archaeology",
+          id: "meseret",
+          title: "Meseret G.",
+          meta: "Simien — Highland trekking",
           detail:
-            "Diver and archaeologist. Leads private caique days through wrecks, sea caves, and empty coves.",
-          price: "$540 / day",
+            "Certified mountain guide from Debark. Ten seasons on the escarpment. Knows every gelada troop by sight.",
+          price: "$220 / day",
         },
         {
-          id: "youssef",
-          title: "Youssef B.",
-          meta: "Morocco — Souks & Sahara",
+          id: "abdu",
+          title: "Abdu M.",
+          meta: "Danakil — Afar expedition",
           detail:
-            "From Marrakech's medina to the Erg Chigaga dunes. Speaks five languages and knows every cook.",
-          price: "$420 / day",
+            "Afar-born expedition leader. Salt caravan routes, volcano approaches, and the delicate politics of the region.",
+          price: "$340 / day",
         },
         {
-          id: "camila",
-          title: "Camila R.",
-          meta: "Patagonia — Ice & rivers",
+          id: "lulit",
+          title: "Lulit B.",
+          meta: "Omo Valley — Anthropology",
           detail:
-            "Glaciologist and packrafter. Runs multi-day traverses across the Northern Ice Field.",
-          price: "$780 / day",
+            "PhD in cultural anthropology, twelve years with Hamer and Karo communities. Respectful, unhurried access.",
+          price: "$380 / day",
+        },
+        {
+          id: "yonas",
+          title: "Yonas T.",
+          meta: "Addis — City & coffee",
+          detail:
+            "Third-generation coffee trader. Walks Piazza and Merkato, then hosts a home ceremony in Shiro Meda.",
+          price: "$180 / day",
         },
       ]}
     />

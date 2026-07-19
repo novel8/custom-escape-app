@@ -4,17 +4,17 @@ import { SiteNav } from "@/components/SiteNav";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us — Novel Travel Archives" },
+      { title: "About Us — NOVEL Ethiopia" },
       {
         name: "description",
         content:
-          "Novel is a tour agency crafting personalized, nocturnal journeys — the ethos, the team, the archive behind every itinerary.",
+          "NOVEL is an Addis-based tour agency crafting personalized Ethiopian journeys — the ethos, the team, the archive behind every itinerary.",
       },
-      { property: "og:title", content: "About Us — Novel Travel Archives" },
+      { property: "og:title", content: "About Us — NOVEL Ethiopia" },
       {
         property: "og:description",
         content:
-          "Meet the archivists behind Novel — a small team designing unhurried, meticulous travel.",
+          "Meet the Addis-based archivists behind NOVEL — designing unhurried, meticulous travel across Ethiopia.",
       },
     ],
   }),
@@ -25,25 +25,25 @@ const pillars = [
   {
     n: "01",
     title: "The Archivist",
-    body: "We treat every destination like a document — researched, footnoted, quietly interpreted.",
+    body: "We treat every region of Ethiopia like a document — researched, footnoted, quietly interpreted.",
   },
   {
     n: "02",
     title: "The Editor",
-    body: "Itineraries are edited, not stacked. What we remove is as considered as what we include.",
+    body: "Itineraries are edited, not stacked. What we leave out of your Ethiopian route is as considered as what stays in.",
   },
   {
     n: "03",
     title: "The Companion",
-    body: "One point of contact, awake in your timezone, from first inquiry to the flight home.",
+    body: "One point of contact, based in Addis, awake in your timezone — from first inquiry to your flight home.",
   },
 ];
 
 const team = [
-  { name: "Ines Marcheva", role: "Founder, Head of Chapters", city: "Lisbon" },
-  { name: "Kaito Renn", role: "Asia Correspondent", city: "Kyoto" },
-  { name: "Sena Okafor", role: "Africa & Levant Desk", city: "Marrakech" },
-  { name: "Julien Vasco", role: "Fleet & Transit", city: "Milan" },
+  { name: "Hiwot Alemu", role: "Founder, Head of Chapters", city: "Addis Ababa" },
+  { name: "Dawit Kebede", role: "Historic Route Desk", city: "Lalibela" },
+  { name: "Fatuma Ali", role: "Afar & Danakil Desk", city: "Mekele" },
+  { name: "Bereket Solomon", role: "Fleet & Transit", city: "Addis Ababa" },
 ];
 
 function AboutPage() {
@@ -56,12 +56,13 @@ function AboutPage() {
             Colophon — About the House
           </span>
           <h1 className="font-display text-4xl leading-[1.05] italic font-medium tracking-tight mb-6">
-            A small studio for unhurried travel.
+            An Addis studio for unhurried Ethiopian travel.
           </h1>
           <p className="text-muted-foreground text-sm leading-relaxed max-w-[34ch]">
-            Novel is a tour agency of ten. We specialize in unique,
-            personalized journeys — flights, lodging, transit, and tours
-            arranged as one continuous document. Stress-free by design.
+            NOVEL is a tour agency of twelve, based in Addis Ababa. We
+            specialize in unique, personalized journeys across Ethiopia —
+            flights, lodging, transit, and tours arranged as one continuous
+            document. Stress-free by design.
           </p>
         </header>
 
@@ -124,8 +125,8 @@ function AboutPage() {
             Begin a correspondence.
           </h2>
           <p className="text-background/70 text-xs mb-6 leading-relaxed">
-            Tell us where your mind keeps wandering. We'll write back within
-            one working day.
+            Tell us which corner of Ethiopia keeps returning to mind. We'll
+            write back within one working day.
           </p>
           <Link
             to="/"
@@ -138,7 +139,7 @@ function AboutPage() {
 
         <footer className="py-10 border-t border-border">
           <p className="px-6 text-center font-mono text-[8px] text-muted-foreground/60 uppercase tracking-[0.1em]">
-            ©2026 Novel Archives. Built for the Night.
+            ©2026 Novel Ethiopia. Built for the Highlands.
           </p>
         </footer>
       </div>

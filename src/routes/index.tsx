@@ -1,24 +1,24 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 import heroImg from "@/assets/hero.jpg";
-import kyotoImg from "@/assets/kyoto.jpg";
-import milosImg from "@/assets/milos.jpg";
+import lalibelaImg from "@/assets/lalibela.jpg";
+import danakilImg from "@/assets/danakil.jpg";
 import { SiteNav } from "@/components/SiteNav";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "NOVEL — Bespoke Travel & Tour Agency" },
+      { title: "NOVEL — Bespoke Ethiopia Travel & Tour Agency" },
       {
         name: "description",
         content:
-          "NOVEL curates personalized tours, flights, stays, and transportation. Journeys that read like literature — hidden gems, effortless logistics.",
+          "NOVEL curates personalized journeys across Ethiopia — Lalibela, Simien Mountains, Danakil, Omo Valley, and Addis. Private stays, expert guides, seamless logistics.",
       },
-      { property: "og:title", content: "NOVEL — Bespoke Travel & Tour Agency" },
+      { property: "og:title", content: "NOVEL — Ethiopia, curated." },
       {
         property: "og:description",
         content:
-          "Personalized itineraries for the culturally curious. Curated tour packages, private stays, and seamless travel logistics.",
+          "Personalized Ethiopian itineraries for the culturally curious. Rock-hewn churches, highland treks, ancient kingdoms.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -29,20 +29,20 @@ export const Route = createFileRoute("/")({
 
 const chapters = [
   {
-    id: "kyoto",
-    title: "The Silent Temples",
-    location: "Kyoto, JP",
-    meta: "09 Days — Curated Residency",
-    price: "$4.2K",
-    image: kyotoImg,
+    id: "lalibela",
+    title: "The Rock-Hewn Silence",
+    location: "Lalibela, ET",
+    meta: "08 Days — Sacred Highlands",
+    price: "$3.6K",
+    image: lalibelaImg,
   },
   {
-    id: "milos",
-    title: "Aegean Stillness",
-    location: "Milos, GR",
-    meta: "07 Days — Private Coastal",
-    price: "$3.8K",
-    image: milosImg,
+    id: "danakil",
+    title: "The Salt & Sulphur Chapter",
+    location: "Danakil, ET",
+    meta: "06 Days — Afar Expedition",
+    price: "$4.1K",
+    image: danakilImg,
   },
 ];
 
@@ -50,25 +50,25 @@ const philosophy = [
   {
     n: "01",
     title: "Radical Tailoring",
-    body: "No two travelers share the same curiosity. We build each journey from a blank page.",
+    body: "No two travelers share the same curiosity. We build each Ethiopian journey from a blank page.",
   },
   {
     n: "02",
     title: "Hidden Access",
-    body: "Private estates, local kitchens, and after-hours experts beyond the reach of standard agencies.",
+    body: "Private monastery mornings, Afar caravans, and coffee ceremonies in homes beyond the guidebooks.",
   },
   {
     n: "03",
     title: "Zero Friction",
-    body: "We manage every logistic — from first-class flights to bespoke dining — so you remain present.",
+    body: "Flights via Addis, 4x4 transit, permits, and armed escorts where required — resolved before you land.",
   },
 ];
 
 const services = [
-  { label: "Lodging", copy: "Boutique hotels & private dark-sky villas." },
-  { label: "Transit", copy: "Electric fleets & private night charters." },
-  { label: "Flights", copy: "First-class & executive concierge routing." },
-  { label: "Tours", copy: "Guided heritage walks & wilderness treks." },
+  { label: "Lodging", copy: "Highland lodges & Addis boutique hotels." },
+  { label: "Transit", copy: "4x4 fleets, domestic flights, private drivers." },
+  { label: "Flights", copy: "Ethiopian Airlines routing & business-class." },
+  { label: "Tours", copy: "Historic route, tribal south, Simien treks." },
 ];
 
 function Index() {
@@ -91,19 +91,19 @@ function Index() {
         <header className="px-6 pt-10 pb-12">
           <div className="animate-reveal">
             <span className="font-mono text-[9px] uppercase tracking-[0.25em] text-accent/80 mb-5 block">
-              Issue 04 — Midnight Transit
+              Issue 04 — Highlands & Rift
             </span>
             <h1 className="font-display text-5xl leading-[1.05] text-balance mb-6 italic font-medium tracking-tight">
-              Travel as a form of literature.
+              Ethiopia, read slowly.
             </h1>
             <p className="text-muted-foreground max-w-[32ch] text-sm leading-relaxed mb-8">
-              NOVEL curates journeys that read like stories. Personalized
-              itineraries, private stays, and seamless logistics for the
-              culturally curious and the worldly at heart.
+              NOVEL curates Ethiopian journeys that read like stories.
+              Rock-hewn churches, thirteen-month calendars, coffee at its
+              source, and the oldest highlands on the continent.
             </p>
             <img
               src={heroImg}
-              alt="Moonlit mountains under a starry sky"
+              alt="Simien Mountains, Ethiopia, at twilight"
               width={1200}
               height={1500}
               className="w-full aspect-[4/5] object-cover ring-1 ring-white/5 mb-8"
@@ -125,7 +125,7 @@ function Index() {
           >
             <h2 className="font-display text-xl italic">Active Chapters</h2>
             <span className="font-mono text-[10px] text-accent">
-              {String(chapters.length).padStart(2, "0")} / 12
+              {String(chapters.length).padStart(2, "0")} / 09
             </span>
           </div>
 
@@ -212,11 +212,11 @@ function Index() {
         <section id="inquire" className="mx-4 p-8 bg-accent text-background mb-12">
           <div className="animate-reveal">
             <h2 className="font-display text-3xl italic mb-4 leading-tight">
-              Begin your novel.
+              Begin your Ethiopia.
             </h2>
             <p className="text-background/70 text-xs mb-10 leading-relaxed">
-              Tell us where you dream of being. Our consultants respond within
-              24 hours to begin the dialogue.
+              Tell us which region calls you — the historic north, the tribal
+              south, or the volcanic east. We respond within 24 hours.
             </p>
             {submitted ? (
               <div className="py-8 text-center">
@@ -233,7 +233,7 @@ function Index() {
                     required
                     value={destination}
                     onChange={(e) => setDestination(e.target.value)}
-                    placeholder="DESTINATION"
+                    placeholder="REGION OR ROUTE"
                     className="bg-transparent border-none outline-none font-mono text-[10px] w-full text-background placeholder:text-background/40 uppercase tracking-widest"
                   />
                 </div>
@@ -267,10 +267,10 @@ function Index() {
             <div className="flex justify-center gap-8 font-mono text-[9px] text-muted-foreground uppercase tracking-[0.2em]">
               <span>IG</span>
               <span>Journal</span>
-              <span>Contact</span>
+              <span>Addis</span>
             </div>
             <p className="mt-12 font-mono text-[8px] text-muted-foreground/60 uppercase tracking-[0.1em]">
-              ©2026 Novel Archives. Built for the Night.
+              ©2026 Novel Ethiopia. Built for the Highlands.
             </p>
           </div>
         </footer>

@@ -4,11 +4,11 @@ import { CatalogPage } from "@/components/CatalogPage";
 export const Route = createFileRoute("/cars")({
   head: () => ({
     meta: [
-      { title: "Cars — NOVEL" },
+      { title: "Cars & Transit — NOVEL Ethiopia" },
       {
         name: "description",
         content:
-          "Chauffeured fleet, self-drive classics, and electric charters arranged by NOVEL.",
+          "4x4 fleets, chauffeured saloons, and long-range expedition vehicles arranged by NOVEL across Ethiopia.",
       },
     ],
   }),
@@ -20,41 +20,49 @@ function CarsPage() {
     <CatalogPage
       issue="Ledger 04"
       eyebrow="Ways to Move"
-      title="Transit, quietly resolved."
-      intro="Chauffeured saloons, self-drive classics, and long-range electric charters — every transfer arranged before you land."
+      title="Ethiopian transit, quietly resolved."
+      intro="4x4 expedition rigs, chauffeured saloons, and long-range convoys — every transfer arranged before you land at Bole."
       ctaLabel="Reserve transit"
       items={[
         {
-          id: "s-class",
-          title: "Mercedes S-Class",
-          meta: "Chauffeured — up to 3 guests",
-          detail:
-            "Long-wheelbase saloon with a vetted driver. Ideal for airport transfers and city days.",
-          price: "$620 / day",
-        },
-        {
-          id: "range-rover",
-          title: "Range Rover Autobiography",
+          id: "landcruiser-78",
+          title: "Toyota Land Cruiser 78",
           meta: "Chauffeured — up to 4 guests",
           detail:
-            "For countryside routes, mountain approaches, and rougher coastal roads.",
-          price: "$780 / day",
+            "The workhorse of the Ethiopian highlands. Roof rack, long-range tank, driver who knows every switchback.",
+          price: "$280 / day",
         },
         {
-          id: "porsche-964",
-          title: "Porsche 911 (964)",
-          meta: "Self-drive — 2 guests",
+          id: "hilux-convoy",
+          title: "Hilux Expedition Convoy",
+          meta: "Chauffeured — Danakil-ready",
           detail:
-            "Restored air-cooled classic. Delivered to your hotel, insured, tank full.",
-          price: "$1.2K / day",
+            "Two-vehicle minimum for Afar routes. Recovery gear, satellite comms, local escort where required.",
+          price: "$520 / day",
         },
         {
-          id: "ev-van",
-          title: "EQV Electric Van",
-          meta: "Chauffeured — up to 6 guests",
+          id: "e-class-addis",
+          title: "Mercedes E-Class",
+          meta: "Chauffeured — Addis city days",
           detail:
-            "Long-range electric with lounge seating. For families and small groups on longer routes.",
-          price: "$540 / day",
+            "Airport transfers, embassy runs, evenings at Yod Abyssinia. Vetted driver, bottled water, wifi.",
+          price: "$220 / day",
+        },
+        {
+          id: "coaster",
+          title: "Toyota Coaster",
+          meta: "Chauffeured — up to 14 guests",
+          detail:
+            "For historic-route groups. Reclining seats, luggage hold, air-con — long days made bearable.",
+          price: "$460 / day",
+        },
+        {
+          id: "domestic-flight",
+          title: "Ethiopian Airlines Domestic",
+          meta: "Booked & managed",
+          detail:
+            "Addis to Lalibela, Gondar, Axum, Mekele, Arba Minch. Sequenced with your ground transit — no missed connections.",
+          price: "from $180 / leg",
         },
       ]}
     />
