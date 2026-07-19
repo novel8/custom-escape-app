@@ -3,6 +3,7 @@ import { useState, type FormEvent } from "react";
 import heroImg from "@/assets/hero.jpg";
 import kyotoImg from "@/assets/kyoto.jpg";
 import milosImg from "@/assets/milos.jpg";
+import { SiteNav } from "@/components/SiteNav";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -83,18 +84,7 @@ function Index() {
 
   return (
     <div className="min-h-screen bg-background text-foreground font-body selection:bg-accent/30">
-      {/* Nav */}
-      <nav className="sticky top-0 z-50 bg-background/90 backdrop-blur-xl border-b border-border px-5 py-4 flex justify-between items-center">
-        <span className="font-display text-lg font-bold tracking-tighter uppercase italic">
-          Novel
-        </span>
-        <div className="flex gap-3 items-center">
-          <span className="font-mono text-[9px] uppercase tracking-widest text-muted-foreground">
-            Index
-          </span>
-          <div className="w-4 h-px bg-accent" />
-        </div>
-      </nav>
+      <SiteNav />
 
       <div className="max-w-md mx-auto">
         {/* Hero */}
