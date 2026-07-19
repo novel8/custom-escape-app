@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { Link } from "@tanstack/react-router";
 import { SiteNav } from "@/components/SiteNav";
 
 type Item = {
@@ -106,5 +106,3 @@ export function CatalogPage({
     </div>
   );
 }
-
-export const _unused = createFileRoute;
