@@ -4,11 +4,11 @@ import { CatalogPage } from "@/components/CatalogPage";
 export const Route = createFileRoute("/hotels")({
   head: () => ({
     meta: [
-      { title: "Hotels — NOVEL" },
+      { title: "Hotels in Ethiopia — NOVEL" },
       {
         name: "description",
         content:
-          "Boutique hotels, private villas, and dark-sky retreats hand-selected by NOVEL.",
+          "Boutique hotels, highland lodges, and heritage retreats across Ethiopia — hand-selected by NOVEL.",
       },
     ],
   }),
@@ -20,40 +20,48 @@ function HotelsPage() {
     <CatalogPage
       issue="Ledger 01"
       eyebrow="Places to Sleep"
-      title="Hotels chosen for their silence."
-      intro="Boutique properties, private villas, and dark-sky retreats — each selected for atmosphere over amenity."
+      title="Ethiopian hotels chosen for their silence."
+      intro="Highland lodges, Addis boutiques, and heritage retreats — each selected for atmosphere over amenity."
       items={[
         {
-          id: "aman-kyoto",
-          title: "The Cedar Ryokan",
-          meta: "Kyoto, JP — 12 rooms",
+          id: "mesqel-addis",
+          title: "Mesqel House",
+          meta: "Addis Ababa — 14 rooms",
           detail:
-            "A hidden ryokan wrapped in cedar and moss. Private onsen, kaiseki dinners, and unhurried mornings.",
-          price: "$1.4K / night",
+            "A restored Italianate villa on Entoto slope. Injera breakfasts, Ethiopian jazz nights, and a cedar-lined library.",
+          price: "$420 / night",
         },
         {
-          id: "milos-villa",
-          title: "Aegean Cliff Villa",
-          meta: "Milos, GR — 4 bedrooms",
+          id: "limalimo",
+          title: "Limalimo Escarpment Lodge",
+          meta: "Simien Mountains — 12 rooms",
           detail:
-            "A whitewashed monolith perched above the sea. Infinity pool, private chef, moonlit terraces.",
-          price: "$2.8K / night",
+            "Timber and stone perched above a 1,000-metre cliff. Gelada baboons at dawn, guided ridge treks after coffee.",
+          price: "$680 / night",
         },
         {
-          id: "atlas-lodge",
-          title: "Atlas Stone Lodge",
-          meta: "Ourika, MA — 8 rooms",
+          id: "ben-abeba",
+          title: "Tukul Village",
+          meta: "Lalibela — 8 tukuls",
           detail:
-            "A remote lodge in the High Atlas. Wood-fired hammam, Berber breakfasts, no signal by design.",
-          price: "$900 / night",
+            "Traditional round stone tukuls overlooking the rock-hewn churches. Private priest-led dawn visits arranged.",
+          price: "$540 / night",
         },
         {
-          id: "patagonia",
-          title: "Fjord House",
-          meta: "Aysén, CL — 6 rooms",
+          id: "kuriftu-bahir",
+          title: "Kuriftu Lake Retreat",
+          meta: "Bahir Dar — 22 rooms",
           detail:
-            "Timber and glass at the edge of a Patagonian fjord. Guided ice-fields and quiet evenings.",
-          price: "$1.7K / night",
+            "Lakeside pavilions on Tana. Boat access to island monasteries, spa built around a natural spring.",
+          price: "$380 / night",
+        },
+        {
+          id: "afar-camp",
+          title: "Erta Ale Base Camp",
+          meta: "Danakil Depression — 6 tents",
+          detail:
+            "Permanent expedition tents at the volcano approach. Afar guides, satellite comms, cold beer under the stars.",
+          price: "$720 / night",
         },
       ]}
     />

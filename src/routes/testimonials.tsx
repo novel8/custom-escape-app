@@ -4,17 +4,17 @@ import { SiteNav } from "@/components/SiteNav";
 export const Route = createFileRoute("/testimonials")({
   head: () => ({
     meta: [
-      { title: "Testimonials — Novel Travel Archives" },
+      { title: "Testimonials — NOVEL Ethiopia" },
       {
         name: "description",
         content:
-          "Field notes from Novel travelers — dispatches on Kyoto ryokans, Aegean villas, Patagonian ice, and midnight transit.",
+          "Field notes from NOVEL travelers on Ethiopian journeys — Lalibela liturgies, Simien treks, Danakil expeditions, Omo Valley encounters.",
       },
-      { property: "og:title", content: "Testimonials — Novel" },
+      { property: "og:title", content: "Testimonials — NOVEL Ethiopia" },
       {
         property: "og:description",
         content:
-          "Correspondence from past travelers on tours arranged by Novel.",
+          "Correspondence from past travelers on Ethiopian tours arranged by NOVEL.",
       },
     ],
   }),
@@ -24,37 +24,37 @@ export const Route = createFileRoute("/testimonials")({
 const entries = [
   {
     quote:
-      "Novel edited our honeymoon like a manuscript. Ten days in Kyoto felt like a single, quiet paragraph — perfectly placed.",
+      "NOVEL edited our two weeks in Ethiopia like a manuscript. The dawn liturgy at Bete Giyorgis is something I will carry for the rest of my life.",
     name: "Amara & Jonas W.",
-    trip: "Kyoto & Naoshima, 10 nights",
+    trip: "Historic Route, 12 nights",
     date: "Mar 2026",
   },
   {
     quote:
-      "The car arrived at 04:12 exactly. That precision continued for two weeks. I have never traveled with less friction.",
+      "The Land Cruiser arrived at 04:12 exactly for our Simien departure. That precision continued for two weeks. I have never traveled Africa with less friction.",
     name: "Priya Rao",
-    trip: "Milos & Athens, 8 nights",
+    trip: "Simien & Lalibela, 9 nights",
     date: "Sep 2025",
   },
   {
     quote:
-      "Their glaciologist walked us onto the ice at dawn. It was not a tour. It was a lecture in the middle of a cathedral.",
+      "Their Afar guide walked us to the lava lake rim at midnight. It was not a tour. It was a lecture in the middle of the Earth's furnace.",
     name: "Henrik Öberg",
-    trip: "Patagonia expedition, 12 nights",
+    trip: "Danakil expedition, 7 nights",
     date: "Nov 2025",
   },
   {
     quote:
-      "One WhatsApp thread. One person. Every question answered before I finished typing. This is what a travel agent should be.",
+      "One WhatsApp thread with an Addis-based coordinator. Every question answered before I finished typing. Even during the domestic flight strike.",
     name: "Delphine M.",
-    trip: "Marrakech & Atlas, 7 nights",
+    trip: "Omo Valley & Addis, 10 nights",
     date: "Feb 2026",
   },
   {
     quote:
-      "They rerouted us mid-flight after a strike in Rome and we didn't lose a single reservation. I still don't know how.",
+      "The coffee ceremony in a Yirgacheffe farmer's home was worth the entire trip. NOVEL arranges the kind of access money alone can't buy.",
     name: "The Okonkwo family",
-    trip: "Italy grand tour, 14 nights",
+    trip: "Coffee Origins & South, 8 nights",
     date: "Jul 2025",
   },
 ];
@@ -69,11 +69,11 @@ function TestimonialsPage() {
             Correspondence — Filed Reports
           </span>
           <h1 className="font-display text-4xl leading-[1.05] italic font-medium tracking-tight mb-6">
-            Dispatches from the field.
+            Dispatches from Ethiopia.
           </h1>
           <p className="text-muted-foreground text-sm leading-relaxed max-w-[34ch]">
-            Unedited notes returned by travelers after their chapters closed.
-            Names printed with permission.
+            Unedited notes returned by travelers after their Ethiopian
+            chapters closed. Names printed with permission.
           </p>
         </header>
 
@@ -124,7 +124,8 @@ function TestimonialsPage() {
             Write the next entry.
           </h2>
           <p className="text-background/70 text-xs mb-6 leading-relaxed">
-            Every itinerary begins as a paragraph in an email. Send us yours.
+            Every Ethiopian itinerary begins as a paragraph in an email.
+            Send us yours.
           </p>
           <Link
             to="/"
@@ -137,7 +138,7 @@ function TestimonialsPage() {
 
         <footer className="py-10 border-t border-border">
           <p className="px-6 text-center font-mono text-[8px] text-muted-foreground/60 uppercase tracking-[0.1em]">
-            ©2026 Novel Archives. Built for the Night.
+            ©2026 Novel Ethiopia. Built for the Highlands.
           </p>
         </footer>
       </div>
