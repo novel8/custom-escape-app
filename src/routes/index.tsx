@@ -3,6 +3,7 @@ import { useState, type FormEvent } from "react";
 import heroImg from "@/assets/hero.jpg";
 import kyotoImg from "@/assets/kyoto.jpg";
 import milosImg from "@/assets/milos.jpg";
+import { SiteNav } from "@/components/SiteNav";
 
 export const Route = createFileRoute("/")({
   head: () => ({
