@@ -7,6 +7,8 @@ const navItems = [
   { to: "/destinations", label: "Destinations" },
   { to: "/tour-guides", label: "Tour Guides" },
   { to: "/cars", label: "Cars" },
+  { to: "/about", label: "About Us" },
+  { to: "/testimonials", label: "Testimonials" },
 ] as const;
 
 export function SiteNav() {
