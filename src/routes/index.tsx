@@ -1,11 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 import { Instagram, Mail, MessageCircle } from "lucide-react";
+import { toast } from "sonner";
 import heroImg from "@/assets/hero.jpg";
 import lalibelaImg from "@/assets/lalibela.jpg";
 import danakilImg from "@/assets/danakil.jpg";
 import { SiteNav } from "@/components/SiteNav";
 import { CONTACT, waLink, mailLink } from "@/lib/contact";
+import { inquiriesClient } from "@/lib/inquiries-client";
 
 
 export const Route = createFileRoute("/")({
