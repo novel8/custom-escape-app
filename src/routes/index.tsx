@@ -268,9 +268,10 @@ function Index() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full py-4 bg-background text-accent text-[10px] font-bold uppercase tracking-[0.2em] mt-6 ring-1 ring-background hover:bg-background/90 transition-colors"
+                  disabled={submitting}
+                  className="w-full py-4 bg-background text-accent text-[10px] font-bold uppercase tracking-[0.2em] mt-6 ring-1 ring-background hover:bg-background/90 transition-colors disabled:opacity-60"
                 >
-                  Submit Inquiry
+                  {submitting ? "Sending…" : "Submit Inquiry"}
                 </button>
               </form>
             )}
