@@ -80,13 +80,24 @@ function Index() {
   const [submitted, setSubmitted] = useState(false);
   const [destination, setDestination] = useState("");
   const [email, setEmail] = useState("");
+  const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    if (!destination || !email) return;
-    const body = `Region or route: ${destination}%0AContact email: ${email}`;
-    window.open(mailLink(`Ethiopia inquiry — ${destination}`, decodeURIComponent(body)), "_blank");
+    if (!destination || !email || submitting) return;
+    setSubmitting(true);
+    const { error } = await inquiriesClient
+      .from("inquiries")
+      .insert({ email, message: destination });
+    setSubmitting(false);
+    if (error) {
+      toast.error("Could not send your inquiry. Please try again.");
+      return;
+    }
+    toast.success("Inquiry received. We'll be in touch within 24 hours.");
     setSubmitted(true);
+    setDestination("");
+    setEmail("");
   };
 
 
