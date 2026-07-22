@@ -1,11 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 import { Instagram, Mail, MessageCircle } from "lucide-react";
+import { toast } from "sonner";
 import heroImg from "@/assets/hero.jpg";
 import lalibelaImg from "@/assets/lalibela.jpg";
 import danakilImg from "@/assets/danakil.jpg";
 import { SiteNav } from "@/components/SiteNav";
 import { CONTACT, waLink, mailLink } from "@/lib/contact";
+import { inquiriesClient } from "@/lib/inquiries-client";
 
 
 export const Route = createFileRoute("/")({
@@ -78,13 +80,24 @@ function Index() {
   const [submitted, setSubmitted] = useState(false);
   const [destination, setDestination] = useState("");
   const [email, setEmail] = useState("");
+  const [submitting, setSubmitting] = useState(false);
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    if (!destination || !email) return;
-    const body = `Region or route: ${destination}%0AContact email: ${email}`;
-    window.open(mailLink(`Ethiopia inquiry — ${destination}`, decodeURIComponent(body)), "_blank");
+    if (!destination || !email || submitting) return;
+    setSubmitting(true);
+    const { error } = await inquiriesClient
+      .from("inquiries")
+      .insert({ email, message: destination });
+    setSubmitting(false);
+    if (error) {
+      toast.error("Could not send your inquiry. Please try again.");
+      return;
+    }
+    toast.success("Inquiry received. We'll be in touch within 24 hours.");
     setSubmitted(true);
+    setDestination("");
+    setEmail("");
   };
 
 
@@ -255,9 +268,10 @@ function Index() {
                 </div>
                 <button
                   type="submit"
-                  className="w-full py-4 bg-background text-accent text-[10px] font-bold uppercase tracking-[0.2em] mt-6 ring-1 ring-background hover:bg-background/90 transition-colors"
+                  disabled={submitting}
+                  className="w-full py-4 bg-background text-accent text-[10px] font-bold uppercase tracking-[0.2em] mt-6 ring-1 ring-background hover:bg-background/90 transition-colors disabled:opacity-60"
                 >
-                  Submit Inquiry
+                  {submitting ? "Sending…" : "Submit Inquiry"}
                 </button>
               </form>
             )}
