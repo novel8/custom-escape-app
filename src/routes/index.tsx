@@ -1,9 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
+import { Instagram, Mail, MessageCircle } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
 import lalibelaImg from "@/assets/lalibela.jpg";
 import danakilImg from "@/assets/danakil.jpg";
 import { SiteNav } from "@/components/SiteNav";
+import { CONTACT, waLink, mailLink } from "@/lib/contact";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -258,22 +261,65 @@ function Index() {
           </div>
         </section>
 
+        {/* Field Journal — Instagram */}
+        <section className="px-6 pb-20" aria-label="Instagram field journal">
+          <div className="flex justify-between items-end border-b border-border pb-3 mb-6">
+            <h2 className="font-display text-xl italic">Field Journal</h2>
+            <a
+              href={CONTACT.instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-[10px] uppercase tracking-widest text-accent hover:underline"
+            >
+              @{CONTACT.instagramHandle} ↗
+            </a>
+          </div>
+          <div className="grid grid-cols-3 gap-1">
+            {[heroImg, lalibelaImg, danakilImg, danakilImg, heroImg, lalibelaImg].map((src, i) => (
+              <a
+                key={i}
+                href={CONTACT.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative block aspect-square overflow-hidden ring-1 ring-white/5 group"
+              >
+                <img src={src} alt="Ethiopia field note" loading="lazy" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                <span className="absolute inset-0 bg-background/0 group-hover:bg-background/40 transition-colors flex items-center justify-center">
+                  <Instagram className="w-5 h-5 text-background opacity-0 group-hover:opacity-100 transition-opacity" />
+                </span>
+              </a>
+            ))}
+          </div>
+        </section>
+
         {/* Footer */}
         <footer className="py-12 border-t border-border">
           <div className="px-6 text-center">
             <span className="font-display text-2xl uppercase tracking-tighter opacity-10 block mb-8">
               Novel
             </span>
-            <div className="flex justify-center gap-8 font-mono text-[9px] text-muted-foreground uppercase tracking-[0.2em]">
-              <span>IG</span>
-              <span>Journal</span>
-              <span>Addis</span>
+            <div className="flex justify-center gap-6 mb-6">
+              <a href={CONTACT.instagramUrl} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-accent transition-colors">
+                <Instagram className="w-4 h-4" />
+              </a>
+              <a href={mailLink()} aria-label="Email" className="text-muted-foreground hover:text-accent transition-colors">
+                <Mail className="w-4 h-4" />
+              </a>
+              <a href={waLink()} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="text-muted-foreground hover:text-accent transition-colors">
+                <MessageCircle className="w-4 h-4" />
+              </a>
             </div>
-            <p className="mt-12 font-mono text-[8px] text-muted-foreground/60 uppercase tracking-[0.1em]">
+            <div className="flex flex-col gap-2 font-mono text-[9px] text-muted-foreground uppercase tracking-[0.2em]">
+              <a href={mailLink()} className="hover:text-accent transition-colors">{CONTACT.email}</a>
+              <a href={waLink()} target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">WhatsApp {CONTACT.whatsappDisplay}</a>
+              <span className="text-muted-foreground/60">Addis Ababa · Ethiopia</span>
+            </div>
+            <p className="mt-10 font-mono text-[8px] text-muted-foreground/60 uppercase tracking-[0.1em]">
               ©2026 Novel Ethiopia. Built for the Highlands.
             </p>
           </div>
         </footer>
+
       </div>
     </div>
   );
