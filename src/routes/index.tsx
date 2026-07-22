@@ -82,8 +82,11 @@ function Index() {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!destination || !email) return;
+    const body = `Region or route: ${destination}%0AContact email: ${email}`;
+    window.open(mailLink(`Ethiopia inquiry — ${destination}`, decodeURIComponent(body)), "_blank");
     setSubmitted(true);
   };
+
 
   return (
     <div className="min-h-screen bg-background text-foreground font-body selection:bg-accent/30">
