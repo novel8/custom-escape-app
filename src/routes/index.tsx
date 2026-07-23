@@ -52,6 +52,14 @@ const chapters = [
     image: lalibelaImg,
   },
   {
+    id: "axum",
+    title: "The Stelae of Axum",
+    location: "Axum, ET",
+    meta: "05 Days — Ancient Kingdom",
+    price: "$3.2K",
+    image: axumImg,
+  },
+  {
     id: "danakil",
     title: "The Salt & Sulphur Chapter",
     location: "Danakil, ET",
