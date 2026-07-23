@@ -310,7 +310,7 @@ function Index() {
             </a>
           </div>
           <div className="grid grid-cols-3 gap-1">
-            {[heroImg, lalibelaImg, danakilImg, danakilImg, heroImg, lalibelaImg].map((src, i) => (
+            {[heroImg, lalibelaImg, axumImg, danakilImg, gonderImg, omoImg].map((src, i) => (
               <a
                 key={i}
                 href={CONTACT.instagramUrl}
