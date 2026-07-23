@@ -2,9 +2,19 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 import { Instagram, Mail, MessageCircle } from "lucide-react";
 import { toast } from "sonner";
-import heroImg from "@/assets/hero.jpg";
-import lalibelaImg from "@/assets/lalibela.jpg";
-import danakilImg from "@/assets/danakil.jpg";
+// Real photographs of Ethiopian attractions (Wikimedia Commons, CC-licensed)
+const heroImg =
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Simien_Mountains_02.jpg/1200px-Simien_Mountains_02.jpg";
+const lalibelaImg =
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Bete_Giyorgis_03.jpg/1200px-Bete_Giyorgis_03.jpg";
+const danakilImg =
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Dallol_hot_springs_ETH.JPG/1200px-Dallol_hot_springs_ETH.JPG";
+const axumImg =
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Northern_stelae_park_pre-excavation.jpg/1200px-Northern_stelae_park_pre-excavation.jpg";
+const gonderImg =
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Fasilides_Castle_02.jpg/1200px-Fasilides_Castle_02.jpg";
+const omoImg =
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Hamer_Tribe%2C_Ethiopia_%2817342987206%29.jpg/1200px-Hamer_Tribe%2C_Ethiopia_%2817342987206%29.jpg";
 import { SiteNav } from "@/components/SiteNav";
 import { CONTACT, waLink, mailLink } from "@/lib/contact";
 import { inquiriesClient } from "@/lib/inquiries-client";
