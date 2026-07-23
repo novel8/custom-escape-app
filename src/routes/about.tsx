@@ -24,26 +24,24 @@ export const Route = createFileRoute("/about")({
 const pillars = [
   {
     n: "01",
-    title: "The Archivist",
-    body: "We treat every region of Ethiopia like a document — researched, footnoted, quietly interpreted.",
+    title: "Traveler-First",
+    body: "We're a young startup, which means every guest matters enormously. Your trip is not one of thousands — it's one of the first.",
   },
   {
     n: "02",
-    title: "The Editor",
-    body: "Itineraries are edited, not stacked. What we leave out of your Ethiopian route is as considered as what stays in.",
+    title: "Honest Value",
+    body: "No inflated agency margins. We connect you directly with vetted Ethiopian guides, drivers, and lodges at fair, transparent prices.",
   },
   {
     n: "03",
-    title: "The Companion",
-    body: "One point of contact, based in Addis, awake in your timezone — from first inquiry to your flight home.",
+    title: "Local, End-to-End",
+    body: "Founded and run in Addis Ababa. When something changes on the ground — weather, roads, permits — we're already there to reroute.",
   },
 ];
 
 const team = [
-  { name: "Hiwot Alemu", role: "Founder, Head of Chapters", city: "Addis Ababa" },
-  { name: "Dawit Kebede", role: "Historic Route Desk", city: "Lalibela" },
-  { name: "Fatuma Ali", role: "Afar & Danakil Desk", city: "Mekele" },
-  { name: "Bereket Solomon", role: "Fleet & Transit", city: "Addis Ababa" },
+  { name: "Founding Team", role: "Addis-based, small & scrappy", city: "Addis Ababa" },
+  { name: "Local Guide Network", role: "Historic Route, Simien, Danakil, Omo", city: "Across Ethiopia" },
 ];
 
 function AboutPage() {
@@ -56,15 +54,18 @@ function AboutPage() {
             Colophon — About the House
           </span>
           <h1 className="font-display text-4xl leading-[1.05] italic font-medium tracking-tight mb-6">
-            An Addis studio for unhurried Ethiopian travel.
+            A new Ethiopian travel startup, built around you.
           </h1>
           <p className="text-muted-foreground text-sm leading-relaxed max-w-[34ch]">
-            NOVEL is a tour agency of twelve, based in Addis Ababa. We
-            specialize in unique, personalized journeys across Ethiopia —
-            flights, lodging, transit, and tours arranged as one continuous
-            document. Stress-free by design.
+            NOVEL is a young Addis-based travel startup with a simple mission:
+            deliver real value to tourists visiting Ethiopia. We handle
+            flights, lodging, transit, and tours as one seamless plan — no
+            agency bloat, no cookie-cutter itineraries, no surprises. Because
+            we're just starting out, every traveler gets our full attention
+            and our best pricing.
           </p>
         </header>
+
 
         <section className="px-6 pb-14">
           <div className="flex justify-between items-end border-b border-border pb-3 mb-8">
